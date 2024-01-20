@@ -330,9 +330,9 @@ outer_loop:
 	for {
 		switch {
 		case l.accept(tokenSpaceChars):
-			if l.value() == "\n" {
-				return l.errorf("Newline not allowed within tag/variable.")
-			}
+			//if l.value() == "\n" {
+			//	return l.errorf("Newline not allowed within tag/variable.")
+			//}
 			l.ignore()
 			continue
 		case l.accept(tokenIdentifierChars):
