@@ -268,9 +268,9 @@ func (l *lexer) run() {
 					case EOF:
 						l.errorf("Single-line comment not closed.")
 						return
-					case '\n':
-						l.errorf("Newline not permitted in a single-line comment.")
-						return
+						// case '\n':
+						// 	l.errorf("Newline not permitted in a single-line comment.")
+						// 	return
 					}
 
 					if strings.HasPrefix(l.input[l.pos:], "#}") {
